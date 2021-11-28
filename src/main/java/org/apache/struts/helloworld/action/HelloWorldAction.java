@@ -11,11 +11,17 @@ public class HelloWorldAction extends ActionSupport {
 
     public String execute() {
         messageStore = new MessageStore() ;
-        
+        helloCount++;
         return SUCCESS;
     }
 
     public MessageStore getMessageStore() {
         return messageStore;
+    }
+    
+    private static int helloCount = 0;
+	
+    public int getHelloCount() {
+        return helloCount;
     }
 }
